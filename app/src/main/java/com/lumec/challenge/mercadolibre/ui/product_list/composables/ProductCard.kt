@@ -2,7 +2,6 @@ package com.lumec.challenge.mercadolibre.ui.product_list.composables
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -22,10 +21,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.SubcomposeAsyncImage
-import com.lumec.challenge.mercadolibre.domain.Product
+import com.lumec.challenge.mercadolibre.domain.ProductPreview
 import com.lumec.challenge.mercadolibre.ui.product_list.ProductListViewModel
+import com.lumec.challenge.mercadolibre.ui.theme.Blue
 import com.lumec.challenge.mercadolibre.ui.theme.BorderCard
-import com.lumec.challenge.mercadolibre.ui.theme.Orange
 import com.lumec.challenge.mercadolibre.ui.theme.ProductName
 
 @Composable
@@ -55,7 +54,7 @@ fun ProductCard(
 }
 
 @Composable
-fun ProductPicture(product: Product) {
+fun ProductPicture(product: ProductPreview) {
     SubcomposeAsyncImage(
         model = product.pictureUrl,
         loading = {
@@ -63,14 +62,14 @@ fun ProductPicture(product: Product) {
         },
         contentDescription = "Product Image",
         modifier = Modifier
-                .border(BorderStroke(1.dp, BorderCard))
+                .background(Color.White)
                 .fillMaxHeight()
                 .width(100.dp),
     )
 }
 
 @Composable
-fun ProductContent(product: Product) {
+fun ProductContent(product: ProductPreview) {
     Column(
         modifier = Modifier
                 .fillMaxSize(1f)
@@ -81,7 +80,7 @@ fun ProductContent(product: Product) {
             Text(
                 modifier = Modifier
                         .clip(RoundedCornerShape(4.dp))
-                        .background(Orange)
+                        .background(Blue)
                         .padding(4.dp),
                 text = "Mercado Pago",
                 style = TextStyle(
@@ -110,7 +109,10 @@ fun ProductContent(product: Product) {
             ),
         )
         Text(
-            text = "${product.availableQuantity} unidades disponibles",
+            text = if (product.availableQuantity == 1)
+                "${product.availableQuantity} unidad disponible"
+            else
+                "${product.availableQuantity} unidades disponibles",
             style = TextStyle(
                 color = Color.Black,
                 fontSize = 14.sp,

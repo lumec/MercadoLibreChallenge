@@ -20,5 +20,5 @@ object RemoteConnection {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val service: RemoteService = builder.create()
+    val mercadoLibreApi: MercadoLibreApi = builder.create()
 }

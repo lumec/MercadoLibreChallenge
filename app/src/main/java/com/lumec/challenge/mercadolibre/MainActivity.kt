@@ -1,7 +1,6 @@
 package com.lumec.challenge.mercadolibre
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -12,18 +11,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.lifecycleScope
-import com.lumec.challenge.mercadolibre.framework.server.RemoteConnection
-import com.lumec.challenge.mercadolibre.ui.product_list.ProductListViewModel
-import com.lumec.challenge.mercadolibre.ui.product_list.composables.ProductCard
+import com.lumec.challenge.mercadolibre.ui.product_detail.ProductDetailsViewModel
+import com.lumec.challenge.mercadolibre.ui.product_detail.composables.Details
 import com.lumec.challenge.mercadolibre.ui.theme.MercadoLibreTheme
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: ProductListViewModel by viewModels()
+    //private val viewModel: ProductListViewModel by viewModels()
+    private val productDetailsViewModelViewModel: ProductDetailsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,13 +31,12 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    ProductCard(viewModel)
+                    //ProductCard(viewModel)
+                    //DefaultPreview()
+                    Details(productDetailsViewModelViewModel)
                 }
             }
         }
-
-        val number: Double = 1.2
-        val number2 = 1.8
 
     }
 }
@@ -54,7 +50,7 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     MercadoLibreTheme {
-        //Greeting("Android")
+        Greeting("Android")
         //ProductCard()
     }
 }

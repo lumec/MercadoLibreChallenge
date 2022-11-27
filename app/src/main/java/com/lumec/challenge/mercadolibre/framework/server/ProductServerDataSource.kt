@@ -1,25 +1,68 @@
 package com.lumec.challenge.mercadolibre.framework.server
 
 import com.lumec.challenge.mercadolibre.data.ProductRemoteDataSource
-import com.lumec.challenge.mercadolibre.domain.Product
+import com.lumec.challenge.mercadolibre.domain.ProductDetails
+import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
 
-    override suspend fun getProductsByName(name: String): List<Product> =
-        RemoteConnection.service.getProductsByName(name).results.toDomainModel()
+    override suspend fun getProductsByName(name: String): List<ProductPreview> =
+        RemoteConnection.mercadoLibreApi.getProductsByName(name).results.toDomainModel()
+
+
+    override suspend fun getProductDetailsById(productId: String): ProductDetails = runBlocking{
+
+        lateinit var details: ProductDetailsResponse
+        lateinit var description: Description
+        val detailsResponse = async { getDetailsById(productId) }
+        val descriptionResponse = async { getDescriptionById(productId) }
+
+        try {
+            details = detailsResponse.await()
+            description = descriptionResponse.await()
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+
+        details.toDomainModel(description)
+
+    }
+
+    private suspend fun getDetailsById(productId: String): ProductDetailsResponse {
+        return RemoteConnection.mercadoLibreApi.getDetailsById(productId)
+    }
+
+    private suspend fun getDescriptionById(productId: String): Description {
+        return RemoteConnection.mercadoLibreApi.getDescriptionById(productId)
+    }
 
 }
 
-private fun List<RemoteProduct>.toDomainModel(): List<Product> = map { it.toDomainModel() }
+private fun List<ProductPreviewResponse>.toDomainModel(): List<ProductPreview> = map { it.toDomainModel() }
 
-private fun RemoteProduct.toDomainModel(): Product = Product(
-    id = id ?: "",
-    title = title ?: "",
-    price = price ?: 0,
-    soldQuantity = soldQuantity ?: 0,
-    condition = condition ?: "",
-    pictureUrl = "https://http2.mlstatic.com/D_NQ_NP_$thumbnailId-F" ?: "",
+private fun ProductPreviewResponse.toDomainModel(): ProductPreview = ProductPreview(
+    acceptsMercadopago = acceptsMercadopago ?: false,
     availableQuantity = availableQuantity ?: 0,
-    acceptsMercadopago = acceptsMercadopago ?: false
+    id = id ?: "",
+    pictureUrl = secureThumbnail ?: "",
+    price = price ?: 0,
+    title = title ?: "",
+)
+
+private fun ProductDetailsResponse.toDomainModel(
+    description: Description,
+): ProductDetails = ProductDetails(
+    acceptsMercadopago = acceptsMercadopago ?: false,
+    availableQuantity = availableQuantity ?: 0,
+    condition = condition ?: "",
+    description = description.text ?: "",
+    freeShipping = shipping?.freeShipping ?: false,
+    id = id ?: "",
+    pictureUrl = secureThumbnail ?: "",
+    picturesUrl = pictures?.mapNotNull { it?.secureUrl } ?: emptyList(),
+    price = price ?: 0,
+    title = title ?: ""
 )

@@ -6,5 +6,7 @@ object Constants {
 
     //ENDPOINTS
     const val GET_PRODUCTS = "sites/$SITE_ID/search"
+    const val GET_DESCRIPTION = "sites/$SITE_ID/search"
 
 }
+
