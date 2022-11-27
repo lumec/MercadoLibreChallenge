@@ -14,6 +14,5 @@ data class ProductPreviewResponse(
     val id: String?,
     val price: Int?,
     val title: String?,
-    @SerializedName("secure_thumbnail")
-    val secureThumbnail: String?,
+    val thumbnail: String?,
 )

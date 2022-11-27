@@ -47,7 +47,7 @@ private fun ProductPreviewResponse.toDomainModel(): ProductPreview = ProductPrev
     acceptsMercadopago = acceptsMercadopago ?: false,
     availableQuantity = availableQuantity ?: 0,
     id = id ?: "",
-    pictureUrl = secureThumbnail ?: "",
+    pictureUrl = thumbnail ?: "",
     price = price ?: 0,
     title = title ?: "",
 )

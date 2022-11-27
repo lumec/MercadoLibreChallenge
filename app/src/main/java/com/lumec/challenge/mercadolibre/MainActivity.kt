@@ -13,14 +13,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.lumec.challenge.mercadolibre.ui.product_detail.ProductDetailsViewModel
 import com.lumec.challenge.mercadolibre.ui.product_detail.composables.Details
+import com.lumec.challenge.mercadolibre.ui.product_list.ProductListViewModel
+import com.lumec.challenge.mercadolibre.ui.product_list.composables.ProductCard
 import com.lumec.challenge.mercadolibre.ui.theme.MercadoLibreTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    //private val viewModel: ProductListViewModel by viewModels()
-    private val productDetailsViewModelViewModel: ProductDetailsViewModel by viewModels()
+    private val viewModel: ProductListViewModel by viewModels()
+    //private val productDetailsViewModelViewModel: ProductDetailsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +33,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    //ProductCard(viewModel)
+                    ProductCard(viewModel)
                     //DefaultPreview()
-                    Details(productDetailsViewModelViewModel)
+                    //Details(productDetailsViewModelViewModel)
                 }
             }
         }
