@@ -9,9 +9,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.lumec.challenge.mercadolibre.ui.common.ErrorScreen
 import com.lumec.challenge.mercadolibre.ui.product_detail.components.Details
-import com.lumec.challenge.mercadolibre.ui.product_list.ErrorMessage
-import com.lumec.challenge.mercadolibre.ui.product_list.errorToString
 
 @Composable
 fun ProductDetailsScreen(
@@ -32,7 +31,7 @@ fun ProductDetailsScreen(
             CircularProgressIndicator()
         }
         if (state.error != null) {
-            ErrorMessage(errorToString(state.error))
+            ErrorScreen(state.error)
         }
     }
 }
