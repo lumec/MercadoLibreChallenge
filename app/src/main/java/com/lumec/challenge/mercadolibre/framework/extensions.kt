@@ -5,16 +5,18 @@ import arrow.core.left
 import arrow.core.right
 import com.lumec.challenge.mercadolibre.domain.Error
 import retrofit2.HttpException
+import timber.log.Timber
 import java.io.IOException
 
 fun Throwable.toError(): Error = when (this) {
     is IOException -> Error.Connectivity
-    is HttpException -> Error.Server(code())
-    else -> Error.Unknown(message ?: "")
+    is HttpException -> Error.Server
+    else -> Error.Unknown
 }
 
 suspend fun <T> tryCall(action: suspend () -> T): Either<Error, T> = try {
     action().right()
 } catch (e: Exception) {
+    Timber.e(e)
     e.toError().left()
 }
