@@ -9,8 +9,6 @@ data class ProductListResponse(
 data class ProductPreviewResponse(
     @SerializedName("accepts_mercadopago")
     val acceptsMercadopago: Boolean?,
-    @SerializedName("available_quantity")
-    val availableQuantity: Int?,
     val id: String?,
     val price: Int?,
     val title: String?,

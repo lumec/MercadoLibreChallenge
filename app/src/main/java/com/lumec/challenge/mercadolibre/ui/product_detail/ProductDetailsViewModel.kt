@@ -1,49 +1,39 @@
 package com.lumec.challenge.mercadolibre.ui.product_detail
 
-import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lumec.challenge.mercadolibre.common.Resource
+import arrow.core.Either
 import com.lumec.challenge.mercadolibre.usecases.GetProductDetailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
 @HiltViewModel
 class ProductDetailsViewModel @Inject constructor(
     private val getProductDetailsUseCase: GetProductDetailsUseCase,
+    savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     private val _state = mutableStateOf(ProductDetailsUiState())
     val state: State<ProductDetailsUiState> = _state
 
-    private val productId = "MCO948360573"
-
     init {
-        getProductDetails()
+        savedStateHandle.get<String>("productId")?.let{ productId ->
+            getProductDetails(productId)
+        }
     }
 
-    private fun getProductDetails() {
-        getProductDetailsUseCase(productId).onEach { result ->
-            Log.e("log", "result details-> ${result.data}")
-
-            when(result) {
-                is Resource.Success -> {
-                    _state.value = ProductDetailsUiState(product = result.data)
-                }
-                is Resource.Error -> {
-                    _state.value = ProductDetailsUiState(error = result.message ?:
-                    "An expected error occurred!!")
-                }
-                is Resource.Loading -> {
-                    _state.value = ProductDetailsUiState(isLoading = true)
-                }
+    private fun getProductDetails(productId: String) {
+        _state.value = ProductDetailsUiState(isLoading = true)
+        viewModelScope.launch {
+            when(val product = getProductDetailsUseCase(productId)) {
+                is Either.Left -> {_state.value = ProductDetailsUiState(error = product.value)}
+                is Either.Right -> { _state.value = ProductDetailsUiState(product = product.value)}
             }
-        }.launchIn(viewModelScope)
+        }
     }
-
 }

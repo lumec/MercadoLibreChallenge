@@ -1,30 +1,36 @@
 package com.lumec.challenge.mercadolibre.framework.server
 
+import arrow.core.Either
 import com.lumec.challenge.mercadolibre.data.ProductRemoteDataSource
+import com.lumec.challenge.mercadolibre.domain.Error
 import com.lumec.challenge.mercadolibre.domain.ProductDetails
 import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import com.lumec.challenge.mercadolibre.framework.tryCall
 import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.coroutineScope
 import javax.inject.Inject
 
 class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
 
-    override suspend fun getProductsByName(name: String): List<ProductPreview> =
+    override suspend fun getProductsByName(
+        name: String
+    ): Either<Error, List<ProductPreview>> = tryCall {
         RemoteConnection.mercadoLibreApi.getProductsByName(name).results.toDomainModel()
+    }
 
-
-    override suspend fun getProductDetailsById(productId: String): ProductDetails = runBlocking{
+    override suspend fun getProductDetailsById(
+        productId: String
+    ): Either<Error, ProductDetails> = tryCall {
 
         lateinit var details: ProductDetailsResponse
         lateinit var description: Description
-        val detailsResponse = async { getDetailsById(productId) }
-        val descriptionResponse = async { getDescriptionById(productId) }
 
-        try {
+        coroutineScope {
+            val detailsResponse = async { getDetailsById(productId) }
+            val descriptionResponse = async { getDescriptionById(productId) }
+
             details = detailsResponse.await()
             description = descriptionResponse.await()
-        } catch (ex: Exception) {
-            ex.printStackTrace()
         }
 
         details.toDomainModel(description)
@@ -41,11 +47,11 @@ class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
 
 }
 
-private fun List<ProductPreviewResponse>.toDomainModel(): List<ProductPreview> = map { it.toDomainModel() }
+private fun List<ProductPreviewResponse>.toDomainModel(): List<ProductPreview> =
+    map { it.toDomainModel() }
 
 private fun ProductPreviewResponse.toDomainModel(): ProductPreview = ProductPreview(
     acceptsMercadopago = acceptsMercadopago ?: false,
-    availableQuantity = availableQuantity ?: 0,
     id = id ?: "",
     pictureUrl = thumbnail ?: "",
     price = price ?: 0,

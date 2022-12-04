@@ -1,10 +1,9 @@
-package com.lumec.challenge.mercadolibre.ui.product_list.composables
+package com.lumec.challenge.mercadolibre.ui.product_list.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -19,36 +18,30 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.SubcomposeAsyncImage
 import com.lumec.challenge.mercadolibre.domain.ProductPreview
-import com.lumec.challenge.mercadolibre.ui.product_list.ProductListViewModel
 import com.lumec.challenge.mercadolibre.ui.theme.Blue
 import com.lumec.challenge.mercadolibre.ui.theme.BorderCard
 import com.lumec.challenge.mercadolibre.ui.theme.ProductName
 
 @Composable
 fun ProductCard(
-    viewModel: ProductListViewModel = hiltViewModel()
+    product: ProductPreview,
+    onItemClick: (ProductPreview) -> Unit
 ) {
-    val state = viewModel.state.value
-
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(state.products) { product ->
-            Card(
-                modifier = Modifier
-                        .padding(horizontal = 8.dp, vertical = 8.dp)
-                        .fillMaxWidth()
-                        .height(130.dp),
-                border = BorderStroke(1.dp, BorderCard),
-                elevation = 2.dp,
-                shape = RoundedCornerShape(corner = CornerSize(8.dp))
-            ) {
-                Row(modifier = Modifier.padding(8.dp)) {
-                    ProductPicture(product = product)
-                    ProductContent(product = product)
-                }
-            }
+    Card(
+        modifier = Modifier
+                .clickable { onItemClick(product) }
+                .padding(horizontal = 8.dp, vertical = 8.dp)
+                .fillMaxWidth()
+                .height(130.dp),
+        border = BorderStroke(1.dp, BorderCard),
+        elevation = 2.dp,
+        shape = RoundedCornerShape(corner = CornerSize(8.dp))
+    ) {
+        Row(modifier = Modifier.padding(8.dp)) {
+            ProductPicture(product = product)
+            ProductContent(product = product)
         }
     }
 }
@@ -108,17 +101,5 @@ fun ProductContent(product: ProductPreview) {
                 fontSize = 22.sp,
             ),
         )
-        Text(
-            text = if (product.availableQuantity == 1)
-                "${product.availableQuantity} unidad disponible"
-            else
-                "${product.availableQuantity} unidades disponibles",
-            style = TextStyle(
-                color = Color.Black,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.SemiBold
-            ),
-        )
-
     }
 }
