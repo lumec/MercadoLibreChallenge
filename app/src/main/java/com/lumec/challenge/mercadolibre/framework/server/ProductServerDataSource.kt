@@ -15,6 +15,7 @@ class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
     override suspend fun getProductsByName(
         name: String
     ): Either<Error, List<ProductPreview>> = tryCall {
+        throw Exception("Prueba 2" ); // Force a crash
         RemoteConnection.mercadoLibreApi.getProductsByName(name).results.toDomainModel()
     }
 
