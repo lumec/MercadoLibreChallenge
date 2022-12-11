@@ -19,7 +19,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
-import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import com.lumec.challenge.domain.ProductPreview
 import com.lumec.challenge.mercadolibre.ui.theme.Blue
 import com.lumec.challenge.mercadolibre.ui.theme.BorderCard
 import com.lumec.challenge.mercadolibre.ui.theme.ProductName

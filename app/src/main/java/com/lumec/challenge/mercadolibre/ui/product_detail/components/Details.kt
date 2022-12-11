@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.lumec.challenge.mercadolibre.domain.ProductDetails
+import com.lumec.challenge.domain.ProductDetails
 import com.lumec.challenge.mercadolibre.ui.theme.Blue
 import com.lumec.challenge.mercadolibre.ui.theme.Green
 
@@ -78,7 +78,6 @@ fun Details(
             }
         }
         Spacer(modifier = Modifier.height(2.dp))
-        Log.e("log", "picture url -> ${product.pictureUrl}")
         AsyncImage(
             model = product.pictureUrl,
             contentDescription = "Product Image",

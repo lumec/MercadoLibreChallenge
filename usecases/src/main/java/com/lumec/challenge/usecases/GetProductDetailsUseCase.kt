@@ -1,9 +1,9 @@
-package com.lumec.challenge.mercadolibre.usecases
+package com.lumec.challenge.usecases
 
 import arrow.core.Either
-import com.lumec.challenge.mercadolibre.data.ProductRepository
-import com.lumec.challenge.mercadolibre.domain.Error
-import com.lumec.challenge.mercadolibre.domain.ProductDetails
+import com.lumec.challenge.data.ProductRepository
+import com.lumec.challenge.domain.Error
+import com.lumec.challenge.domain.ProductDetails
 import javax.inject.Inject
 
 class GetProductDetailsUseCase @Inject constructor(

@@ -1,7 +1,7 @@
 package com.lumec.challenge.mercadolibre.ui.product_list
 
-import com.lumec.challenge.mercadolibre.domain.Error
-import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import com.lumec.challenge.domain.Error
+import com.lumec.challenge.domain.ProductPreview
 
 data class ProductListUiState(
     val isLoading: Boolean = false,

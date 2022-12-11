@@ -1,4 +1,4 @@
-package com.lumec.challenge.mercadolibre.domain
+package com.lumec.challenge.domain
 
 data class ProductPreview(
     val acceptsMercadopago: Boolean,

@@ -1,9 +1,9 @@
-package com.lumec.challenge.mercadolibre.data
+package com.lumec.challenge.data
 
 import arrow.core.Either
-import com.lumec.challenge.mercadolibre.domain.Error
-import com.lumec.challenge.mercadolibre.domain.ProductDetails
-import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import com.lumec.challenge.domain.Error
+import com.lumec.challenge.domain.ProductDetails
+import com.lumec.challenge.domain.ProductPreview
 
 interface ProductRemoteDataSource {
 

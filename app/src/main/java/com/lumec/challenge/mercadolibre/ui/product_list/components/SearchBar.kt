@@ -48,7 +48,6 @@ fun SearchBar(
                 if (text.isNotEmpty()) {
                     IconButton(
                         onClick = {
-                            Log.e("log", "Close Icon pressed")
                             onDelete()
                             text = ""
                         }

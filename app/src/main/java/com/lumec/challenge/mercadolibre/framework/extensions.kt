@@ -4,9 +4,7 @@ import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
 import com.google.firebase.crashlytics.FirebaseCrashlytics
-import com.google.firebase.crashlytics.internal.model.CrashlyticsReport
-import com.google.firebase.ktx.Firebase
-import com.lumec.challenge.mercadolibre.domain.Error
+import com.lumec.challenge.domain.Error
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException

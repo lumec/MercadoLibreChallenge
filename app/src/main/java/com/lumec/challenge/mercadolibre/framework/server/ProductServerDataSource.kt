@@ -1,22 +1,23 @@
 package com.lumec.challenge.mercadolibre.framework.server
 
 import arrow.core.Either
-import com.lumec.challenge.mercadolibre.data.ProductRemoteDataSource
-import com.lumec.challenge.mercadolibre.domain.Error
-import com.lumec.challenge.mercadolibre.domain.ProductDetails
-import com.lumec.challenge.mercadolibre.domain.ProductPreview
+import com.lumec.challenge.data.ProductRemoteDataSource
+import com.lumec.challenge.domain.Error
+import com.lumec.challenge.domain.ProductDetails
+import com.lumec.challenge.domain.ProductPreview
 import com.lumec.challenge.mercadolibre.framework.tryCall
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import javax.inject.Inject
 
-class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
+class ProductServerDataSource @Inject constructor(
+    private val mercadoLibreApi: MercadoLibreApi
+) : ProductRemoteDataSource {
 
     override suspend fun getProductsByName(
         name: String
     ): Either<Error, List<ProductPreview>> = tryCall {
-        throw Exception("Prueba 2" ); // Force a crash
-        RemoteConnection.mercadoLibreApi.getProductsByName(name).results.toDomainModel()
+        mercadoLibreApi.getProductsByName(name).results.toDomainModel()
     }
 
     override suspend fun getProductDetailsById(
@@ -39,11 +40,11 @@ class ProductServerDataSource @Inject constructor(): ProductRemoteDataSource {
     }
 
     private suspend fun getDetailsById(productId: String): ProductDetailsResponse {
-        return RemoteConnection.mercadoLibreApi.getDetailsById(productId)
+        return mercadoLibreApi.getDetailsById(productId)
     }
 
     private suspend fun getDescriptionById(productId: String): Description {
-        return RemoteConnection.mercadoLibreApi.getDescriptionById(productId)
+        return mercadoLibreApi.getDescriptionById(productId)
     }
 
 }
