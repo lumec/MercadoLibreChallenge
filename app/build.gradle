@@ -1,3 +1,5 @@
+import com.lumec.challenge.buildsrc.Libs
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -40,7 +42,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerExtensionVersion Libs.Compose.version
     }
     packagingOptions {
         resources {
@@ -54,45 +56,42 @@ dependencies {
     implementation project(path: ':domain')
     implementation project(path: ':usecases')
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
-    implementation 'androidx.activity:activity-compose:1.6.1'
-    implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
-    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation Libs.AndroidX.coreKtx
+    implementation Libs.AndroidX.Lifecycle.runtimeKtx
+    implementation Libs.AndroidX.Activity.compose
+    implementation Libs.AndroidX.Navigation.compose
+    implementation Libs.AndroidX.hiltNavigationCompose
 
-    implementation("androidx.compose.material:material:1.4.0-alpha02")
-    implementation "androidx.navigation:navigation-compose:2.5.3"
+    implementation Libs.Compose.Material.material
+    implementation Libs.Compose.UI.ui
+    implementation Libs.Compose.UI.toolingPreview
+    debugImplementation Libs.Compose.UI.tooling
 
-    //Retrofit
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation Libs.Arrow.core
 
-    //Hilt
-    implementation 'com.google.dagger:hilt-android:2.44.2'
-    kapt 'com.google.dagger:hilt-compiler:2.44.2'
-    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+    implementation Libs.Coil.compose
 
-    //Coil
-    implementation("io.coil-kt:coil-compose:2.2.2")
+    implementation platform(Libs.Firebase.bom)
+    implementation Libs.Firebase.analytics
+    implementation Libs.Firebase.crashlytics
+    implementation Libs.Firebase.Common.ktx
 
-    //Either
-    implementation "io.arrow-kt:arrow-core:1.0.1"
+    implementation Libs.Hilt.android
+    kapt Libs.Hilt.compiler
 
-    //Timber
-    implementation 'com.jakewharton.timber:timber:5.0.1'
+    implementation Libs.OkHttp3.loginInterceptor
 
-    //Firebase
-    implementation platform('com.google.firebase:firebase-bom:31.1.1')
-    implementation 'com.google.firebase:firebase-crashlytics'
-    implementation 'com.google.firebase:firebase-analytics'
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.converterGson
 
+    implementation Libs.Timber.timber
+
+    ///////////////////// TESTING /////////////////////
+
+    androidTestImplementation Libs.AndroidX.Test.Ext.junit
+    androidTestImplementation Libs.AndroidX.Test.Espresso.core
+    androidTestImplementation Libs.Compose.UI.testJunit4
+
+    testImplementation Libs.JUnit.junit
 
 }
