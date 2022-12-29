@@ -67,8 +67,10 @@ fun SearchBar(
             ),
             keyboardActions = KeyboardActions(
                 onSearch = {
-                    onKeyboardSearchClicked()
-                    onSearch(text)
+                    if(text.isNotEmpty()) {
+                        onKeyboardSearchClicked()
+                        onSearch(text)
+                    }
                 }
             )
         )
