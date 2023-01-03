@@ -47,6 +47,7 @@ object Libs {
         object Coroutines {
             private const val version = "1.6.4"
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+            const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
         }
     }
 
@@ -109,6 +110,11 @@ object Libs {
     object JUnit {
         private const val version = "4.13.2"
         const val junit = "junit:junit:$version"
+    }
+
+    object Mockito {
+        const val kotlin = "org.mockito.kotlin:mockito-kotlin:4.0.0"
+        const val inline = "org.mockito:mockito-inline:4.4.0"
     }
 
     object OkHttp3 {

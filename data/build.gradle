@@ -14,8 +14,11 @@ dependencies {
     implementation project(path: ':domain')
 
     implementation Libs.Kotlin.Coroutines.core
-
     implementation Libs.JavaX.inject
-
     implementation Libs.Arrow.core
+
+    testImplementation project(":testShared")
+    testImplementation Libs.JUnit.junit
+    testImplementation Libs.Mockito.kotlin
+    testImplementation Libs.Mockito.inline
 }
