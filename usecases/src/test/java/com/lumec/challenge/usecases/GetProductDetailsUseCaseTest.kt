@@ -24,4 +24,17 @@ class GetProductDetailsUseCaseTest {
 
         Assert.assertEquals(productDetails, result)
     }
+
+    @Test
+    fun `Invoke calls product repository error`(): Unit = runBlocking {
+        val error: Either<Error, ProductDetails> =
+            Either.Left(Error.Unknown)
+        val getProductDetailsUseCase = GetProductDetailsUseCase(mock {
+            onBlocking { getProductDetailsById("error") } doReturn error
+        })
+
+        val result = getProductDetailsUseCase("error")
+
+        Assert.assertEquals(error, result)
+    }
 }

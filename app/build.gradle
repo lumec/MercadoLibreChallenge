@@ -92,6 +92,9 @@ dependencies {
     androidTestImplementation Libs.AndroidX.Test.Espresso.core
     androidTestImplementation Libs.Compose.UI.testJunit4
 
+    testImplementation project(":testShared")
     testImplementation Libs.JUnit.junit
-
+    testImplementation Libs.Mockito.kotlin
+    testImplementation Libs.Mockito.inline
+    testImplementation Libs.Kotlin.Coroutines.test
 }

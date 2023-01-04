@@ -5,7 +5,7 @@ import com.lumec.challenge.domain.Error
 import com.lumec.challenge.domain.ProductPreview
 import com.lumec.challenge.testshared.sampleProductList
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.kotlin.doReturn
 import org.mockito.kotlin.mock
@@ -22,5 +22,17 @@ class GetProductsUseCaseTest {
         val result = getProductsUseCase("product")
 
         assertEquals(productList, result)
+    }
+
+    @Test
+    fun `Invoke calls product repository error`(): Unit = runBlocking {
+        val error: Either<Error, List<ProductPreview>> = Either.Left(Error.Unknown)
+        val getProductsUseCase = GetProductsUseCase(mock {
+            onBlocking { getProductsByName("error") } doReturn error
+        })
+
+        val result = getProductsUseCase("error")
+
+        assertEquals(error, result)
     }
 }

@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import com.lumec.challenge.mercadolibre.R
 import com.lumec.challenge.domain.Error
+import com.lumec.challenge.mercadolibre.R
 
 @Composable
 fun ErrorScreen(error: Error) {
