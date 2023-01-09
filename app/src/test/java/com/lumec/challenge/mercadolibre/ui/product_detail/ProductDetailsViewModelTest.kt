@@ -34,8 +34,6 @@ class ProductDetailsViewModelTest {
 
     private lateinit var viewModel: ProductDetailsViewModel
 
-
-
     @Before
     fun setUp() = runTest {
         whenever(savedStateHandle.get<String>("productId")).thenReturn("id")
