@@ -99,8 +99,10 @@ dependencies {
     ///////////////////// TESTING /////////////////////
 
     androidTestImplementation Libs.AndroidX.Test.Ext.junit
-    androidTestImplementation Libs.AndroidX.Test.Espresso.core
     androidTestImplementation Libs.Compose.UI.testJunit4
+    androidTestImplementation Libs.AndroidX.Test.Espresso.contrib
+    androidTestImplementation Libs.AndroidX.Test.runner
+    androidTestImplementation Libs.AndroidX.Test.rules
 
     testImplementation project(":testShared")
     testImplementation Libs.JUnit.junit
