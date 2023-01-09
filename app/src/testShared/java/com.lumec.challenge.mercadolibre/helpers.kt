@@ -13,7 +13,7 @@ fun buildRepositoryWith(
     return ProductRepository(remoteDataSource)
 }
 
-fun buildProductListResponse(vararg productName: String) = (1..10).map {
+fun buildProductListResponse(productName: String) = (1..10).map {
     ProductPreviewResponse(
         acceptsMercadopago = true,
         id = "M00000$it",

@@ -38,7 +38,7 @@ class ProductListViewModel @Inject constructor(
     fun onEvent(event: ProductListEvents) {
         when(event) {
             ProductListEvents.EraseIconClicked -> {
-                _state.value = ProductListUiState(query = "")
+                _state.value = ProductListUiState()
             }
             is ProductListEvents.SearchQueryInput -> {
                 viewModelScope.launch {

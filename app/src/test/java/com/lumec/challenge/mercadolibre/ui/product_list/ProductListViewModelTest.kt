@@ -59,7 +59,7 @@ class ProductListViewModelTest {
     }
 
     @Test
-    fun`when erased icon event is called, returns empty query`() = runTest {
+    fun`when erased icon event is called, returns an empty query`() = runTest {
         viewModel.onEvent(ProductListEvents.EraseIconClicked)
 
         testDispatcher.advanceUntilIdle()

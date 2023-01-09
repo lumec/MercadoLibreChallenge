@@ -29,21 +29,20 @@ class ProductListIntegrationTest {
         testDispatcher.advanceUntilIdle()
         val result = viewModel.state.value
 
-        Assert.assertEquals("product 3", result.products[0].title)
-        Assert.assertEquals("product 5", result.products[1].title)
-        Assert.assertEquals("product 10", result.products[2].title)
+        Assert.assertEquals("product 3", result.products[2].title)
+        Assert.assertEquals("product 5", result.products[4].title)
+        Assert.assertEquals("product 10", result.products[9].title)
     }
 
     @Test
-    fun `when search query input event is called, returns error from server`() {
-        val remoteDataSource = ProductListResponse(buildProductListResponse())
-        val viewModel = buildViewModelWith(products = remoteDataSource)
-        viewModel.onEvent(ProductListEvents.SearchQueryInput("error"))
+    fun `when erased icon event is called, returns an empty query`() {
+        val viewModel = buildViewModelWith()
+        viewModel.onEvent(ProductListEvents.EraseIconClicked)
 
         testDispatcher.advanceUntilIdle()
         val result = viewModel.state.value
 
-        Assert.assertEquals(Error.Connectivity, result.error)
+        Assert.assertEquals(ProductListUiState(), result)
     }
 
     private fun buildViewModelWith(
