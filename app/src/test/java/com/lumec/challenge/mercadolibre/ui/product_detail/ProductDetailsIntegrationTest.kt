@@ -1,9 +1,13 @@
 package com.lumec.challenge.mercadolibre.ui.product_detail
 
 import androidx.lifecycle.SavedStateHandle
+import com.lumec.challenge.mercadolibre.buildDescriptionResponse
+import com.lumec.challenge.mercadolibre.buildProductDetailsResponse
+import com.lumec.challenge.mercadolibre.buildRepositoryWith
 import com.lumec.challenge.mercadolibre.framework.server.Description
 import com.lumec.challenge.mercadolibre.framework.server.ProductDetailsResponse
 import com.lumec.challenge.mercadolibre.framework.server.ProductListResponse
+import com.lumec.challenge.mercadolibre.sampleDetails
 import com.lumec.challenge.mercadolibre.ui.*
 import com.lumec.challenge.usecases.GetProductDetailsUseCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi

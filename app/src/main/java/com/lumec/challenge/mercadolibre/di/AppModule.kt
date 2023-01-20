@@ -1,7 +1,6 @@
 package com.lumec.challenge.mercadolibre.di
 
 import com.lumec.challenge.data.ProductRemoteDataSource
-import com.lumec.challenge.mercadolibre.common.Constants
 import com.lumec.challenge.mercadolibre.framework.server.MercadoLibreApi
 import com.lumec.challenge.mercadolibre.framework.server.ProductServerDataSource
 import dagger.Binds

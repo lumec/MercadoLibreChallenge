@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "452648978866",
+    "project_id": "mercadolibrelite-b0b45",
+    "storage_bucket": "mercadolibrelite-b0b45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452648978866:android:de85c48508f5a3ddaf3cab",
+        "android_client_info": {
+          "package_name": "com.lumec.challenge.mercadolibre"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452648978866-ukues3j8ncb7b2k6ra4bga1qe5n8ia99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6rrUL3QuZqhafRAJvUfNqBweTYgDSaT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452648978866-ukues3j8ncb7b2k6ra4bga1qe5n8ia99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

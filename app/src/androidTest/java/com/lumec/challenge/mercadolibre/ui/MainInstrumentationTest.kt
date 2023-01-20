@@ -12,7 +12,10 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockResponse
-import org.junit.*
+import org.junit.Assert
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
 import javax.inject.Inject
 
 @ExperimentalCoroutinesApi
@@ -58,6 +61,7 @@ class MainInstrumentationTest {
         mockResponse.setResponseCode(200)
         mockWebServerRule.server.enqueue(mockResponse.fromJson("details.json"))
         mockWebServerRule.server.enqueue(mockResponse.fromJson("description.json"))
+
         val details = remoteDataSource.getProductDetailsById("MLA805330648")
 
         details.fold({ throw Exception(it.toString()) }) {

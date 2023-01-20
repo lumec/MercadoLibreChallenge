@@ -1,13 +1,12 @@
 package com.lumec.challenge.mercadolibre.ui.product_list
 
-import com.lumec.challenge.domain.Error
+import com.lumec.challenge.mercadolibre.buildProductListResponse
+import com.lumec.challenge.mercadolibre.buildRepositoryWith
 import com.lumec.challenge.mercadolibre.framework.server.Description
 import com.lumec.challenge.mercadolibre.framework.server.ProductDetailsResponse
 import com.lumec.challenge.mercadolibre.framework.server.ProductListResponse
+import com.lumec.challenge.mercadolibre.sampleDetails
 import com.lumec.challenge.mercadolibre.ui.CoroutinesTestRule
-import com.lumec.challenge.mercadolibre.ui.buildProductListResponse
-import com.lumec.challenge.mercadolibre.ui.buildRepositoryWith
-import com.lumec.challenge.mercadolibre.ui.sampleDetails
 import com.lumec.challenge.usecases.GetProductsUseCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Assert

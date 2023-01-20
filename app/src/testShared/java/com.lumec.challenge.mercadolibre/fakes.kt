@@ -1,4 +1,4 @@
-package com.lumec.challenge.mercadolibre.ui
+package com.lumec.challenge.mercadolibre
 
 import com.lumec.challenge.mercadolibre.framework.server.*
 
