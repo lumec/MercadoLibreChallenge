@@ -19,7 +19,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.lumec.challenge.mercadolibre.di.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary true
         }
@@ -103,6 +103,9 @@ dependencies {
     androidTestImplementation Libs.AndroidX.Test.Espresso.contrib
     androidTestImplementation Libs.AndroidX.Test.runner
     androidTestImplementation Libs.AndroidX.Test.rules
+    androidTestImplementation Libs.Hilt.test
+    kaptAndroidTest Libs.Hilt.compiler
+    androidTestImplementation Libs.OkHttp3.mockWebServer
 
     testImplementation project(":testShared")
     testImplementation Libs.JUnit.junit

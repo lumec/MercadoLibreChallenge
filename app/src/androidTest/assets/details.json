@@ -1,0 +1,1515 @@
+{
+  "id": "MLA805330648",
+  "site_id": "MLA",
+  "title": "Moto G6 32 Gb Plata 3 Gb Ram",
+  "subtitle": null,
+  "seller_id": 185702920,
+  "category_id": "MLA1055",
+  "official_store_id": null,
+  "price": 15999,
+  "base_price": 15999,
+  "original_price": null,
+  "currency_id": "ARS",
+  "initial_quantity": 19,
+  "available_quantity": 0,
+  "sold_quantity": 5,
+  "sale_terms": [
+    {
+      "id": "INVOICE",
+      "name": "Facturación",
+      "value_id": "6891885",
+      "value_name": "Factura A",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "6891885",
+          "name": "Factura A",
+          "struct": null
+        }
+      ],
+      "value_type": "list"
+    },
+    {
+      "id": "WARRANTY_TYPE",
+      "name": "Tipo de garantía",
+      "value_id": "2230279",
+      "value_name": "Garantía de fábrica",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2230279",
+          "name": "Garantía de fábrica",
+          "struct": null
+        }
+      ],
+      "value_type": "list"
+    },
+    {
+      "id": "WARRANTY_TIME",
+      "name": "Tiempo de garantía",
+      "value_id": null,
+      "value_name": "12 meses",
+      "value_struct": {
+        "number": 12,
+        "unit": "meses"
+      },
+      "values": [
+        {
+          "id": null,
+          "name": "12 meses",
+          "struct": {
+            "number": 12,
+            "unit": "meses"
+          }
+        }
+      ],
+      "value_type": "number_unit"
+    }
+  ],
+  "buying_mode": "buy_it_now",
+  "listing_type_id": "gold_special",
+  "start_time": "2019-08-02T17:26:21.000Z",
+  "stop_time": "2039-07-28T17:33:48.000Z",
+  "condition": "new",
+  "permalink": "https://articulo.mercadolibre.com.ar/MLA-805330648-moto-g6-32-gb-plata-3-gb-ram-_JM",
+  "thumbnail_id": "685061-MLA31003463570_062019",
+  "thumbnail": "http://http2.mlstatic.com/D_685061-MLA31003463570_062019-I.jpg",
+  "secure_thumbnail": "https://http2.mlstatic.com/D_685061-MLA31003463570_062019-I.jpg",
+  "pictures": [
+    {
+      "id": "685061-MLA31003463570_062019",
+      "url": "http://http2.mlstatic.com/D_685061-MLA31003463570_062019-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_685061-MLA31003463570_062019-O.jpg",
+      "size": "248x500",
+      "max_size": "596x1197",
+      "quality": ""
+    },
+    {
+      "id": "917274-MLA31003463571_062019",
+      "url": "http://http2.mlstatic.com/D_917274-MLA31003463571_062019-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_917274-MLA31003463571_062019-O.jpg",
+      "size": "248x500",
+      "max_size": "596x1200",
+      "quality": ""
+    },
+    {
+      "id": "764479-MLA31003463572_062019",
+      "url": "http://http2.mlstatic.com/D_764479-MLA31003463572_062019-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_764479-MLA31003463572_062019-O.jpg",
+      "size": "244x500",
+      "max_size": "590x1206",
+      "quality": ""
+    },
+    {
+      "id": "859086-MLA31003470564_062019",
+      "url": "http://http2.mlstatic.com/D_859086-MLA31003470564_062019-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_859086-MLA31003470564_062019-O.jpg",
+      "size": "244x500",
+      "max_size": "587x1201",
+      "quality": ""
+    },
+    {
+      "id": "832380-MLA31003483537_062019",
+      "url": "http://http2.mlstatic.com/D_832380-MLA31003483537_062019-O.jpg",
+      "secure_url": "https://http2.mlstatic.com/D_832380-MLA31003483537_062019-O.jpg",
+      "size": "500x485",
+      "max_size": "838x814",
+      "quality": ""
+    }
+  ],
+  "video_id": null,
+  "descriptions": [
+  ],
+  "accepts_mercadopago": true,
+  "non_mercado_pago_payment_methods": [
+  ],
+  "shipping": {
+    "mode": "me2",
+    "free_methods": [
+      {
+        "id": 73328,
+        "rule": {
+          "default": true,
+          "free_mode": "country",
+          "free_shipping_flag": true,
+          "value": null
+        }
+      }
+    ],
+    "tags": [
+      "self_service_out",
+      "mandatory_free_shipping"
+    ],
+    "dimensions": null,
+    "local_pick_up": false,
+    "free_shipping": true,
+    "logistic_type": "fulfillment",
+    "store_pick_up": false
+  },
+  "international_delivery_mode": "none",
+  "seller_address": {
+    "city": {
+      "id": "TUxBQk1PTjE2OTBa",
+      "name": "Monte Castro"
+    },
+    "state": {
+      "id": "AR-C",
+      "name": "Capital Federal"
+    },
+    "country": {
+      "id": "AR",
+      "name": "Argentina"
+    },
+    "search_location": {
+      "neighborhood": {
+        "id": "TUxBQk1PTjE2OTBa",
+        "name": "Monte Castro"
+      },
+      "city": {
+        "id": "TUxBQ0NBUGZlZG1sYQ",
+        "name": "Capital Federal"
+      },
+      "state": {
+        "id": "TUxBUENBUGw3M2E1",
+        "name": "Capital Federal"
+      }
+    },
+    "id": 1117498971
+  },
+  "seller_contact": null,
+  "location": {
+  },
+  "coverage_areas": [
+  ],
+  "attributes": [
+    {
+      "id": "DIMENSIONS",
+      "name": "Medidas",
+      "value_id": null,
+      "value_name": "0.154 m x 0.072 m x 0.008 m",
+      "value_struct": null,
+      "values": [
+        {
+          "id": null,
+          "name": "0.154 m x 0.072 m x 0.008 m",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "",
+      "attribute_group_name": "",
+      "value_type": "string"
+    },
+    {
+      "id": "BATTERY_CAPACITY",
+      "name": "Capacidad de la batería",
+      "value_id": "98435",
+      "value_name": "3000 mAh",
+      "value_struct": {
+        "number": 3000,
+        "unit": "mAh"
+      },
+      "values": [
+        {
+          "id": "98435",
+          "name": "3000 mAh",
+          "struct": {
+            "number": 3000,
+            "unit": "mAh"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "BATTERY_TYPE",
+      "name": "Tipo de batería",
+      "value_id": "95013",
+      "value_name": "Ion de litio",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "95013",
+          "name": "Ion de litio",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "BRAND",
+      "name": "Marca",
+      "value_id": "2503",
+      "value_name": "Motorola",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2503",
+          "name": "Motorola",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "CARRIER",
+      "name": "Compañía telefónica",
+      "value_id": "298335",
+      "value_name": "Liberado",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "298335",
+          "name": "Liberado",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "list"
+    },
+    {
+      "id": "COLOR",
+      "name": "Color",
+      "value_id": "976",
+      "value_name": "Plata",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "976",
+          "name": "Plata",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "COMPATIBLE_SIM_CARD_SIZES",
+      "name": "Tamaños de tarjeta SIM compatibles",
+      "value_id": "80453",
+      "value_name": "Nano-SIM",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "80453",
+          "name": "Nano-SIM",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "CPU_MODELS",
+      "name": "Modelos de CPU",
+      "value_id": "7643307",
+      "value_name": "8x1.8 GHz Cortex-A53",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7643307",
+          "name": "8x1.8 GHz Cortex-A53",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "DEPTH",
+      "name": "Profundidad",
+      "value_id": "6892145",
+      "value_name": "8.3 mm",
+      "value_struct": {
+        "number": 8.3,
+        "unit": "mm"
+      },
+      "values": [
+        {
+          "id": "6892145",
+          "name": "8.3 mm",
+          "struct": {
+            "number": 8.3,
+            "unit": "mm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "DISPLAY_PIXELS_PER_INCH",
+      "name": "Píxeles por pulgada de la pantalla",
+      "value_id": "7070606",
+      "value_name": "424 ppi",
+      "value_struct": {
+        "number": 424,
+        "unit": "ppi"
+      },
+      "values": [
+        {
+          "id": "7070606",
+          "name": "424 ppi",
+          "struct": {
+            "number": 424,
+            "unit": "ppi"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "DISPLAY_RESOLUTION",
+      "name": "Resolución de la pantalla",
+      "value_id": "7207009",
+      "value_name": "1080 px x 2160 px",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7207009",
+          "name": "1080 px x 2160 px",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "DISPLAY_SIZE",
+      "name": "Tamaño de la pantalla",
+      "value_id": "6928043",
+      "value_name": "5.7",
+      "value_struct": {
+        "number": 5.7,
+        "unit": ""
+      },
+      "values": [
+        {
+          "id": "6928043",
+          "name": "5.7",
+          "struct": {
+            "number": 5.7,
+            "unit": ""
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "DISPLAY_TECHNOLOGY",
+      "name": "Tecnología de la pantalla",
+      "value_id": "80490",
+      "value_name": "IPS",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "80490",
+          "name": "IPS",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "EXCLUSIVE_CHANNEL",
+      "name": "Canal exclusivo",
+      "value_id": "7865259",
+      "value_name": "Mercado Libre",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7865259",
+          "name": "Mercado Libre",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "list"
+    },
+    {
+      "id": "FRONT_CAMERAS_NUMBER",
+      "name": "Cantidad de cámaras frontales",
+      "value_id": "7477216",
+      "value_name": "1",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7477216",
+          "name": "1",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number"
+    },
+    {
+      "id": "FRONT_CAMERA_APERTURE",
+      "name": "Apertura del diafragma de la cámara frontal",
+      "value_id": "7408595",
+      "value_name": "f 2.2",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7408595",
+          "name": "f 2.2",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "FRONT_CAMERA_RECORDING_RESOLUTION",
+      "name": "Resolución de video de la cámara frontal",
+      "value_id": "7173215",
+      "value_name": "1920 px x 1080 px",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7173215",
+          "name": "1920 px x 1080 px",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "GTIN",
+      "name": "Código universal de producto",
+      "value_id": null,
+      "value_name": "7790894898625,7790894898618",
+      "value_struct": null,
+      "values": [
+        {
+          "id": null,
+          "name": "7790894898625",
+          "struct": null
+        },
+        {
+          "id": null,
+          "name": "7790894898618",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "HEIGHT",
+      "name": "Altura",
+      "value_id": "6944570",
+      "value_name": "153.8 mm",
+      "value_struct": {
+        "number": 153.8,
+        "unit": "mm"
+      },
+      "values": [
+        {
+          "id": "6944570",
+          "name": "153.8 mm",
+          "struct": {
+            "number": 153.8,
+            "unit": "mm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "INTERNAL_MEMORY",
+      "name": "Memoria interna",
+      "value_id": "59725",
+      "value_name": "32 GB",
+      "value_struct": {
+        "number": 32,
+        "unit": "GB"
+      },
+      "values": [
+        {
+          "id": "59725",
+          "name": "32 GB",
+          "struct": {
+            "number": 32,
+            "unit": "GB"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "IS_DUAL_SIM",
+      "name": "Es Dual SIM",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "IS_SPLASH_RESISTANT",
+      "name": "Es resistente a salpicaduras",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "IS_WATERPROOF",
+      "name": "Es a prueba de agua",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "ITEM_CONDITION",
+      "name": "Condición del ítem",
+      "value_id": "2230284",
+      "value_name": "Nuevo",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2230284",
+          "name": "Nuevo",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "list"
+    },
+    {
+      "id": "LINE",
+      "name": "Línea",
+      "value_id": "3073863",
+      "value_name": "Moto G",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "3073863",
+          "name": "Moto G",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "MAIN_COLOR",
+      "name": "Color principal",
+      "value_id": "2450294",
+      "value_name": "Gris",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2450294",
+          "name": "Gris",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "list"
+    },
+    {
+      "id": "MAIN_FRONT_CAMERA_RESOLUTION",
+      "name": "Resolución de la cámara frontal principal",
+      "value_id": "7207052",
+      "value_name": "8 Mpx",
+      "value_struct": {
+        "number": 8,
+        "unit": "Mpx"
+      },
+      "values": [
+        {
+          "id": "7207052",
+          "name": "8 Mpx",
+          "struct": {
+            "number": 8,
+            "unit": "Mpx"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "MAIN_REAR_CAMERA_RESOLUTION",
+      "name": "Resolución de la cámara trasera principal",
+      "value_id": "7199628",
+      "value_name": "12 Mpx",
+      "value_struct": {
+        "number": 12,
+        "unit": "Mpx"
+      },
+      "values": [
+        {
+          "id": "7199628",
+          "name": "12 Mpx",
+          "struct": {
+            "number": 12,
+            "unit": "Mpx"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "MEMORY_CARD_MAX_CAPACITY",
+      "name": "Capacidad máxima de la tarjeta de memoria",
+      "value_id": "2087792",
+      "value_name": "256 GB",
+      "value_struct": {
+        "number": 256,
+        "unit": "GB"
+      },
+      "values": [
+        {
+          "id": "2087792",
+          "name": "256 GB",
+          "struct": {
+            "number": 256,
+            "unit": "GB"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "MEMORY_CARD_TYPES",
+      "name": "Tipos de tarjeta de memoria",
+      "value_id": "7199655",
+      "value_name": "Micro-SD",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7199655",
+          "name": "Micro-SD",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "MOBILE_NETWORK",
+      "name": "Red",
+      "value_id": "367876",
+      "value_name": "4G/LTE",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "367876",
+          "name": "4G/LTE",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "MODEL",
+      "name": "Modelo",
+      "value_id": "8074",
+      "value_name": "G6",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "8074",
+          "name": "G6",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "OPERATING_SYSTEM_NAME",
+      "name": "Nombre del sistema operativo",
+      "value_id": "7403813",
+      "value_name": "Android",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7403813",
+          "name": "Android",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "OS_LAST_COMPATIBLE_VERSION",
+      "name": "Última versión compatible del sistema operativo",
+      "value_id": "11432450",
+      "value_name": "9 Pie",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "11432450",
+          "name": "9 Pie",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "OS_ORIGINAL_VERSION",
+      "name": "Versión original del sistema operativo",
+      "value_id": "7206959",
+      "value_name": "8.0 Oreo",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7206959",
+          "name": "8.0 Oreo",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "PACKAGE_HEIGHT",
+      "name": "Altura del paquete",
+      "value_id": null,
+      "value_name": "6 cm",
+      "value_struct": {
+        "number": 6,
+        "unit": "cm"
+      },
+      "values": [
+        {
+          "id": null,
+          "name": "6 cm",
+          "struct": {
+            "number": 6,
+            "unit": "cm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "PACKAGE_LENGTH",
+      "name": "Largo del paquete",
+      "value_id": null,
+      "value_name": "18.2 cm",
+      "value_struct": {
+        "number": 18.2,
+        "unit": "cm"
+      },
+      "values": [
+        {
+          "id": null,
+          "name": "18.2 cm",
+          "struct": {
+            "number": 18.2,
+            "unit": "cm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "PACKAGE_WEIGHT",
+      "name": "Peso del paquete",
+      "value_id": null,
+      "value_name": "380 g",
+      "value_struct": {
+        "number": 380,
+        "unit": "g"
+      },
+      "values": [
+        {
+          "id": null,
+          "name": "380 g",
+          "struct": {
+            "number": 380,
+            "unit": "g"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "PACKAGE_WIDTH",
+      "name": "Ancho del paquete",
+      "value_id": null,
+      "value_name": "10 cm",
+      "value_struct": {
+        "number": 10,
+        "unit": "cm"
+      },
+      "values": [
+        {
+          "id": null,
+          "name": "10 cm",
+          "struct": {
+            "number": 10,
+            "unit": "cm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "PROCESSOR_CORES_NUMBER",
+      "name": "Cantidad de núcleos del procesador",
+      "value_id": "7206961",
+      "value_name": "8",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7206961",
+          "name": "8",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number"
+    },
+    {
+      "id": "PROCESSOR_MODEL",
+      "name": "Modelo del procesador",
+      "value_id": "6936759",
+      "value_name": "Snapdragon 450",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "6936759",
+          "name": "Snapdragon 450",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "PROCESSOR_SPEED",
+      "name": "Velocidad del procesador",
+      "value_id": "902360",
+      "value_name": "1.8 GHz",
+      "value_struct": {
+        "number": 1.8,
+        "unit": "GHz"
+      },
+      "values": [
+        {
+          "id": "902360",
+          "name": "1.8 GHz",
+          "struct": {
+            "number": 1.8,
+            "unit": "GHz"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "RAM",
+      "name": "Memoria RAM",
+      "value_id": "98970",
+      "value_name": "3 GB",
+      "value_struct": {
+        "number": 3,
+        "unit": "GB"
+      },
+      "values": [
+        {
+          "id": "98970",
+          "name": "3 GB",
+          "struct": {
+            "number": 3,
+            "unit": "GB"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "REAR_CAMERAS_NUMBER",
+      "name": "Cantidad de cámaras traseras",
+      "value_id": "7477262",
+      "value_name": "2",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7477262",
+          "name": "2",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number"
+    },
+    {
+      "id": "REAR_CAMERAS_RESOLUTION",
+      "name": "Resolución de las cámaras traseras",
+      "value_id": "7439826",
+      "value_name": "12 Mpx/5 Mpx",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7439826",
+          "name": "12 Mpx/5 Mpx",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "REAR_CAMERA_APERTURE",
+      "name": "Apertura del diafragma de la cámara trasera",
+      "value_id": "7505956",
+      "value_name": "f 1.8/f 2.2",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7505956",
+          "name": "f 1.8/f 2.2",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "REAR_CAMERA_RECORDING_RESOLUTION",
+      "name": "Resolución de video de la cámara trasera",
+      "value_id": "7199621",
+      "value_name": "1920 px x 1080 px",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7199621",
+          "name": "1920 px x 1080 px",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "SELLER_SKU",
+      "name": "SKU",
+      "value_id": null,
+      "value_name": "xt1925-1",
+      "value_struct": null,
+      "values": [
+        {
+          "id": null,
+          "name": "xt1925-1",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "string"
+    },
+    {
+      "id": "SHIPMENT_PACKING",
+      "name": "Embalaje del envío",
+      "value_id": "7435891",
+      "value_name": "Bolsa",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "7435891",
+          "name": "Bolsa",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "list"
+    },
+    {
+      "id": "SIM_CARD_SLOTS_NUMBER",
+      "name": "Cantidad de ranuras para tarjeta SIM",
+      "value_id": "2087812",
+      "value_name": "1",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "2087812",
+          "name": "1",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number"
+    },
+    {
+      "id": "WEIGHT",
+      "name": "Peso",
+      "value_id": "2087871",
+      "value_name": "167 g",
+      "value_struct": {
+        "number": 167,
+        "unit": "g"
+      },
+      "values": [
+        {
+          "id": "2087871",
+          "name": "167 g",
+          "struct": {
+            "number": 167,
+            "unit": "g"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "WIDTH",
+      "name": "Ancho",
+      "value_id": "6944569",
+      "value_name": "72.3 mm",
+      "value_struct": {
+        "number": 72.3,
+        "unit": "mm"
+      },
+      "values": [
+        {
+          "id": "6944569",
+          "name": "72.3 mm",
+          "struct": {
+            "number": 72.3,
+            "unit": "mm"
+          }
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "number_unit"
+    },
+    {
+      "id": "WITH_ACCELEROMETER",
+      "name": "Con acelerómetro",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_BLUETOOTH",
+      "name": "Con Bluetooth",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_CAMERA",
+      "name": "Con cámara",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_ESIM",
+      "name": "Con eSIM",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_FINGERPRINT_READER",
+      "name": "Con lector de huella digital",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_FRONT_CAMERA_FLASH",
+      "name": "Con flash en la cámara frontal",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_GPS",
+      "name": "Con GPS",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_GYROSCOPE",
+      "name": "Con giroscopio",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_IMEI",
+      "name": "Con IMEI",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_MINI_HDMI",
+      "name": "Con mini HDMI",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_PHYSICAL_QWERTY_KEYBOARD",
+      "name": "Con teclado QWERTY físico",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_PROXIMITY_SENSOR",
+      "name": "Con sensor de proximidad",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_RADIO",
+      "name": "Con radio",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_REMOVABLE_BATTERY",
+      "name": "Con batería removible",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_TOUCHSCREEN_DISPLAY",
+      "name": "Con pantalla táctil",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_TV_TUNER",
+      "name": "Con sintonizador de TV",
+      "value_id": "242084",
+      "value_name": "No",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242084",
+          "name": "No",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_USB_CONNECTOR",
+      "name": "Con conector USB",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    },
+    {
+      "id": "WITH_WIFI",
+      "name": "Con Wi-Fi",
+      "value_id": "242085",
+      "value_name": "Sí",
+      "value_struct": null,
+      "values": [
+        {
+          "id": "242085",
+          "name": "Sí",
+          "struct": null
+        }
+      ],
+      "attribute_group_id": "OTHERS",
+      "attribute_group_name": "Otros",
+      "value_type": "boolean"
+    }
+  ],
+  "warnings": [
+  ],
+  "listing_source": "",
+  "variations": [
+  ],
+  "status": "paused",
+  "sub_status": [
+    "out_of_stock"
+  ],
+  "tags": [
+    "brand_verified",
+    "extended_warranty_eligible",
+    "good_quality_picture",
+    "good_quality_thumbnail",
+    "immediate_payment",
+    "cart_eligible"
+  ],
+  "warranty": "Garantía de fábrica: 12 meses",
+  "catalog_product_id": "MLA9652755",
+  "domain_id": "MLA-CELLPHONES",
+  "parent_item_id": null,
+  "differential_pricing": null,
+  "deal_ids": [
+  ],
+  "automatic_relist": false,
+  "date_created": "2019-08-02T17:26:22.000Z",
+  "last_updated": "2022-11-16T15:03:41.000Z",
+  "health": null,
+  "catalog_listing": true,
+  "channels": [
+    "marketplace"
+  ]
+}

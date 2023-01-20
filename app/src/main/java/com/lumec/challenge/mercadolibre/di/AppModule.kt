@@ -13,6 +13,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -20,19 +21,24 @@ import javax.inject.Singleton
 object AppModule {
 
     @Provides
-    fun provideInterceptorOkHttpClient() = HttpLoggingInterceptor().run {
-        level = HttpLoggingInterceptor.Level.BODY
-        OkHttpClient.Builder().addInterceptor(this).build()
-    }
-
-    @Provides
     @Singleton
-    fun provideMercadoLibreApi(okHttpClient: OkHttpClient): MercadoLibreApi {
-        return Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
-                .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build().create(MercadoLibreApi::class.java)
+    @ApiUrl
+    fun provideApiUrl(): String = "https://api.mercadolibre.com/"
+
+   @Provides
+    @Singleton
+    fun provideMercadoLibreApi(@ApiUrl apiUrl: String): MercadoLibreApi {
+        val okHttpClient = HttpLoggingInterceptor().run {
+            level = HttpLoggingInterceptor.Level.BODY
+            OkHttpClient.Builder().addInterceptor(this).build()
+        }
+
+       return Retrofit.Builder()
+               .baseUrl(apiUrl)
+               .client(okHttpClient)
+               .addConverterFactory(GsonConverterFactory.create())
+               .build()
+               .create()
     }
 }
 
