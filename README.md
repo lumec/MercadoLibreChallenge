@@ -1,24 +1,26 @@
  # MercadoLibreLite con Clean Architecture
 
-Este proyecto implementa los principios de **Clean Architecture** bajo el contexto Android. Para lograr este objetivo fue necesario la modularización del proyecto en combinación con MVVM; inyección de dependencias con **Hilt**; testing unitarios, instrumentacion y UI; seguimiento de errores remoto con **Timber + Firebase Crashlytics**, diseño de UI con **Jetpack Compose** y principios **SOLID**. Todo esto aprovechando la versatilidad de **Koltin**. Por tanto, este pequeño proyecto puede lo ser usado como una guia para aquellos desarrolladores que deseen crear apps desacopladas, testeables, mantenibles y escalable y porque no llevarlas a producción.
+Esta aplicación posee una vista muy sencilla, cuya vista principal posee un campo de búsqueda ubicada en la parte superior de la app y la visualización de resultados de la misma. Además, posee una vista con información más detallada del producto seleccionado.
 
-Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Alvaro Leiva** del cual hice parte y a otros recursos disponibles en la internet.
+Es válido mencionar que este proyecto implementa los principios de **Clean Architecture** bajo el contexto Android. Para lograr este objetivo fue necesario la modularización del proyecto en combinación con MVVM; inyección de dependencias con **Hilt**; testing unitarios, instrumentacion y UI; seguimiento de errores remoto con **Timber + Firebase Crashlytics**, diseño de UI con **Jetpack Compose** y principios **SOLID**. Todo esto aprovechando la versatilidad de **Kotlin**. Por tanto, este pequeño proyecto puede ser usado como una guía para aquellos desarrolladores que deseen crear apps desacopladas, testeables, mantenibles y escalable y porque no llevarlas a producción.
+
+Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Alvaro Leiva,** del cual hice parte y a otros recursos disponibles en la internet.
 
 ------------
 
 ## Logging Remoto: Timber + Firebase Crashlytics
-Por cuestiones de seguridad, el archivo `google-services.json` que hace posibile que el logging remoto no se encuentra dentro del proyecto. Asi que para usar esta funcionalidad dentro deberas:
+Por cuestiones de seguridad, el archivo `google-services.json` que hace posible que el logging remoto no se encuentra dentro del proyecto. Así que para usar esta funcionalidad dentro deberás:
 
 1. Cambiar el nombre del paquete del proyecto.
 2. Crear un proyecto de Firebase en [Firebase console](http://https://console.firebase.google.com/?authuser=0 "Firebase console").
 3. Registrar la aplicación haciendo clic en el icono de Android en la sección de descripción general del proyecto.
 4. Descargar el archivo `google-services.json` y colocarlo en el directorio raíz del módulo de la aplicación de Android.
 
-[Mas información](https://proandroiddev.com/remote-logging-with-timber-and-firebase-realtime-database-a9dfbe66284c "Mas información")
+[Más información](https://proandroiddev.com/remote-logging-with-timber-and-firebase-realtime-database-a9dfbe66284c "Más información")
 
 ------------
 
-## Librerias Usadas 
+## Librerías Usadas 
 
 #### Jetpack
 - [android ktx](https://developer.android.com/kotlin/ktx "android ktx"): Es un conjunto de extensiones de Kotlin que se incluyen con Android Jetpack y otras bibliotecas de Android.
@@ -27,20 +29,20 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posibile
 - [lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "lifecycle"): realiza  acciones en respuesta a un cambio en el estado del ciclo de vida de otro componente, como actividades y fragmentos.
 -[navigation-compose](https://developer.android.com/jetpack/compose/navigation " navigation-compose"): ayuda a navegar entre destinos composables. 
 
-#### Procesos asincronos
-- [coroutines](https://kotlinlang.org/docs/coroutines-overview.html "coroutines"): perfectas para ejeccion de tareas asincronas o no bloqueantes
+#### Procesos asíncronos
+- [coroutines](https://kotlinlang.org/docs/coroutines-overview.html "coroutines"): perfectas para ejecución de tareas asíncronas o no bloqueantes
 
 
-#### Imagenes
+#### Imágenes
 -  [coil](https://coil-kt.github.io/coil/ "coil"): Permite la carga de imágenes alojadas en servicios externos para Android respaldada por Kotlin Coroutines
 
 #### Manejo de errores
-- [arrow-core](https://arrow-kt.io/docs/core/ "arrow-core"): Libreria funcional complementaria para el manejo de errores.
+- [arrow-core](https://arrow-kt.io/docs/core/ "arrow-core"): Librería funcional complementaria para el manejo de errores.
 
-#### Injección de dependencias
+#### Inyección de dependencias
 - [dagger-hilt](https://dagger.dev/hilt/ "dagger-hilt"): Proporciona una forma estándar de incorporar la inyección de dependencia de Dagger en una aplicación de Android.
 
-#### API Rest Integration
+#### Integración API Rest 
 - [retrofit2](https://square.github.io/retrofit/ "retrofit2"): Es un cliente HTTP.
 - [converter-gson](https://github.com/square/retrofit/tree/master/retrofit-converters/gson "converter-gson"): Es un convertidor que usa Gson para la serialización hacia y desde JSON.
 
@@ -60,7 +62,7 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posibile
 
 ## Capa de UI
 
-1. Patron de presentación: MVVM
+1. Patrón de presentación: MVVM
 2. Unidirectional Data Flow
 3. MVVM Observables con State (Compose)
 4. Estados de UI: data class
@@ -86,14 +88,14 @@ La arquitectura limpia en Android se refiere a un enfoque para diseñar aplicaci
   <img src="https://github.com/lumec/MercadoLibreChallenge/blob/compose_testing/images/clean_architecture_es.png"/>
 </p>
 
-Este proyecto esta modularizado de la siguiente manera:
+Este proyecto está modularizado de la siguiente manera:
 
 - app
 - data
 - usecases
 - domain
 
-Ademas posee dos modulos extras transversales a los demas modulos:
+Además, posee dos módulos extras transversales al resto:
 
 - testShared
 - buildSrc
@@ -108,12 +110,12 @@ Dagger Hilt como inyector de dependencias recomendado por Google
 
 ## Testing
 
-El testShared comparte recursos para las prubeas unitarias. 
+El testShared comparte recursos para las pruebas unitarias. 
 En el buildSrc se gestionan las dependencias usadas en el proyecto.
 
 1. Pruebas unitarias de repositorios, casos de uso y viewmodels
 2. Pruebas de Integración
-3. Pruebas de UI con Hilt y MockWebServer. (Por el momento estos tests estan presentando problemas con el Idle Resource)
+3. Pruebas de UI con Hilt y MockWebServer. (Por el momento estos tests están presentando problemas con compose)
 
 -------
 
@@ -122,3 +124,4 @@ En el buildSrc se gestionan las dependencias usadas en el proyecto.
 Falta implementar
 
 -------
+
