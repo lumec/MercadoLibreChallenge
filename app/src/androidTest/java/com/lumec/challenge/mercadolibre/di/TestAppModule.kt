@@ -26,12 +26,14 @@ object TestAppModule {
 
     @Provides
     @Singleton
-    fun provideRemoteService(@ApiUrl apiUrl: String): MercadoLibreApi {
-        val okHttpClient = HttpLoggingInterceptor().run {
-            level = HttpLoggingInterceptor.Level.BODY
-            OkHttpClient.Builder().addInterceptor(this).build()
-        }
+    fun provideOkHttpClient(): OkHttpClient = HttpLoggingInterceptor().run {
+        level = HttpLoggingInterceptor.Level.BODY
+        OkHttpClient.Builder().addInterceptor(this).build()
+    }
 
+    @Provides
+    @Singleton
+    fun provideRemoteService(@ApiUrl apiUrl: String, okHttpClient: OkHttpClient): MercadoLibreApi {
         return Retrofit.Builder()
             .baseUrl(apiUrl)
             .client(okHttpClient)

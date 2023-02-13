@@ -59,6 +59,11 @@ android {
             java.srcDirs += "$projectDir/src/testShared/java"
         }
     }
+
+    testOptions {
+        animationsDisabled = true
+    }
+
 }
 
 dependencies {
@@ -97,12 +102,16 @@ dependencies {
     implementation Libs.Timber.timber
 
     ///////////////////// TESTING /////////////////////
-
+    implementation Libs.AndroidX.Test.Espresso.idlingResource
+    debugImplementation Libs.Compose.UI.testManifest
     androidTestImplementation Libs.AndroidX.Test.Ext.junit
     androidTestImplementation Libs.Compose.UI.testJunit4
+    androidTestImplementation Libs.AndroidX.Test.Espresso.core
     androidTestImplementation Libs.AndroidX.Test.Espresso.contrib
     androidTestImplementation Libs.AndroidX.Test.runner
     androidTestImplementation Libs.AndroidX.Test.rules
+    androidTestImplementation Libs.AndroidX.Navigation.testing
+
     androidTestImplementation Libs.Hilt.test
     kaptAndroidTest Libs.Hilt.compiler
     androidTestImplementation Libs.OkHttp3.mockWebServer
