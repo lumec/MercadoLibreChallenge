@@ -6,6 +6,8 @@ Es válido mencionar que este proyecto implementa los principios de **Clean Arch
 
 Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Alvaro Leiva,** del cual hice parte y a otros recursos disponibles en la internet.
 
+[Vídeo demo](https://www.youtube.com/watch?v=2bxu2ykusxQ "Vídeo demo")
+
 ------------
 
 ## Logging Remoto: Timber + Firebase Crashlytics
@@ -85,7 +87,7 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posible 
 La arquitectura limpia en Android se refiere a un enfoque para diseñar aplicaciones de manera modular y mantenible, utilizando patrones de diseño específicos para asegurar la separación de responsabilidades, facilitar el mantenimiento y actualización. La arquitectura limpia mejora la calidad del código, la facilidad de prueba y la escalabilidad de la aplicación.
 
 <p align="center">
-  <img src="https://github.com/lumec/MercadoLibreChallenge/blob/compose_testing/images/clean_architecture_es.png"/>
+  <img src="https://github.com/lumec/MercadoLibreChallenge/blob/compose_testing/images/clean_architecture_es.png" height="300" width="300"/>
 </p>
 
 Este proyecto está modularizado de la siguiente manera:
