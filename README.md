@@ -4,7 +4,7 @@ Esta aplicación posee una vista muy sencilla, cuya vista principal posee un cam
 
 Es válido mencionar que este proyecto implementa los principios de **Clean Architecture** bajo el contexto Android. Para lograr este objetivo fue necesario la modularización del proyecto en combinación con MVVM; inyección de dependencias con **Hilt**; testing unitarios, instrumentacion y UI; seguimiento de errores remoto con **Timber + Firebase Crashlytics**, diseño de UI con **Jetpack Compose** y principios **SOLID**. Todo esto aprovechando la versatilidad de **Kotlin**. Por tanto, este pequeño proyecto puede ser usado como una guía para aquellos desarrolladores que deseen crear apps desacopladas, testeables, mantenibles y escalable y porque no llevarlas a producción.
 
-Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Alvaro Leiva,** del cual hice parte y a otros recursos disponibles en la internet.
+Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Antonio Leiva,** del cual hice parte y a otros recursos disponibles en la internet.
 
 [Vídeo demo](https://www.youtube.com/watch?v=2bxu2ykusxQ "Vídeo demo")
 
