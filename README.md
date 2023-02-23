@@ -29,7 +29,8 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posible 
 - activity: Acceso a Compose sobre la clase Activity.
 - [compose](https://developer.android.com/jetpack/androidx/releases/compose?hl=en "compose"): Es un moderno kit de herramientas declarativas de IU para Android.
 - [lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "lifecycle"): realiza  acciones en respuesta a un cambio en el estado del ciclo de vida de otro componente, como actividades y fragmentos.
--[navigation-compose](https://developer.android.com/jetpack/compose/navigation " navigation-compose"): ayuda a navegar entre destinos composables. 
+- [navigation-compose](https://developer.android.com/jetpack/compose/navigation " navigation-compose"): ayuda a navegar entre destinos composables. 
+
 
 #### Procesos asíncronos
 - [coroutines](https://kotlinlang.org/docs/coroutines-overview.html "coroutines"): perfectas para ejecución de tareas asíncronas o no bloqueantes
