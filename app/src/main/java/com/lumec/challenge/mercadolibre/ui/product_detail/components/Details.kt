@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.lumec.challenge.domain.ProductDetails
+import com.lumec.challenge.mercadolibre.ui.common.formatPrice
+import com.lumec.challenge.mercadolibre.ui.common.mapCondition
 import com.lumec.challenge.mercadolibre.ui.theme.Blue
 import com.lumec.challenge.mercadolibre.ui.theme.Green
 
@@ -28,9 +30,9 @@ fun Details(
 ) {
     Column(
         modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
-                .verticalScroll(rememberScrollState()),
+            .fillMaxSize()
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
     ) {
         Text(
             text = product.title,
@@ -50,12 +52,12 @@ fun Details(
         Spacer(modifier = Modifier.height(8.dp))
         Row(
             modifier = Modifier
-                    .fillMaxWidth()
-                    .align(Alignment.CenterHorizontally),
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = "Estado del producto: ${product.condition}",
+                text = "Estado del producto: ${mapCondition(product.condition)}",
                 modifier = Modifier.align(Alignment.Bottom),
                 style = TextStyle(
                     fontSize = 12.sp
@@ -64,9 +66,9 @@ fun Details(
             if (product.acceptsMercadopago) {
                 Text(
                     modifier = Modifier
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(Blue)
-                            .padding(4.dp),
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(Blue)
+                        .padding(4.dp),
                     text = "Mercado Pago",
                     style = TextStyle(
                         color = Color.White,
@@ -81,13 +83,13 @@ fun Details(
             model = product.pictureUrl,
             contentDescription = "Product Image",
             modifier = Modifier
-                    .background(Color.White)
-                    .fillMaxWidth()
-                    .height(250.dp)
+                .background(Color.White)
+                .fillMaxWidth()
+                .height(250.dp)
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "$ ${product.price}",
+            text = product.price.formatPrice(),
             style = TextStyle(
                 fontSize = 22.sp
             )

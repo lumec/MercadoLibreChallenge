@@ -19,6 +19,10 @@ class ProductListViewModel @Inject constructor(
     private val _state = mutableStateOf(ProductListUiState())
     val state: State<ProductListUiState> = _state
 
+    init {
+        _state.value = ProductListUiState(resetSearch = true)
+    }
+
     private suspend fun getProducts(
         query: String
     ) {
@@ -38,7 +42,7 @@ class ProductListViewModel @Inject constructor(
     fun onEvent(event: ProductListEvents) {
         when(event) {
             ProductListEvents.EraseIconClicked -> {
-                _state.value = ProductListUiState()
+                _state.value = ProductListUiState(resetSearch = true)
             }
             is ProductListEvents.SearchQueryInput -> {
                 viewModelScope.launch {
