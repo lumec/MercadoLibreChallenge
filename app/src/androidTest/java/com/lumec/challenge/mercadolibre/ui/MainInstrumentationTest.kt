@@ -1,18 +1,17 @@
 package com.lumec.challenge.mercadolibre.ui
 
-import android.util.Log
 import android.view.ViewGroup
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.test.*
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.lumec.challenge.data.ProductRemoteDataSource
 import com.lumec.challenge.mercadolibre.MainActivity
 import com.lumec.challenge.mercadolibre.data.server.CoroutinesTestRule
-import com.lumec.challenge.mercadolibre.data.server.ErrorDispatcher
 import com.lumec.challenge.mercadolibre.data.server.MockWebServerRule
 import com.lumec.challenge.mercadolibre.data.server.SuccessDispatcher
 import com.lumec.challenge.mercadolibre.ui.theme.MercadoLibreTheme

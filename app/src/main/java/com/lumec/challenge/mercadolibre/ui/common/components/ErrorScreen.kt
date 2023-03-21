@@ -1,10 +1,8 @@
-package com.lumec.challenge.mercadolibre.ui.common
+package com.lumec.challenge.mercadolibre.ui.common.components
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -20,6 +18,7 @@ import com.lumec.challenge.mercadolibre.R
 fun ErrorScreen(error: Error) {
     Column(
         modifier = Modifier
+                .padding(8.dp)
                 .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -42,7 +41,8 @@ fun ErrorImage(error: Int) {
 fun ErrorMessage(error: String) {
     Text(
         text = error,
-        textAlign = TextAlign.Center
+        textAlign = TextAlign.Center,
+        style = MaterialTheme.typography.subtitle1
     )
 }
 

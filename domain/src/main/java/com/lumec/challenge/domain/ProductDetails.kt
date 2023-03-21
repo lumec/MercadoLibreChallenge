@@ -7,6 +7,7 @@ data class ProductDetails(
     val description: String,
     val freeShipping: Boolean,
     val id: String,
+    val location: String,
     val pictureUrl: String,
     val picturesUrl: List<String>,
     val price: Int,

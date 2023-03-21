@@ -7,10 +7,10 @@ import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -19,9 +19,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
 import com.lumec.challenge.domain.ProductPreview
+import com.lumec.challenge.mercadolibre.ui.common.components.MercadoPagoLabel
 import com.lumec.challenge.mercadolibre.ui.common.formatPrice
 import com.lumec.challenge.mercadolibre.ui.theme.Blue
-import com.lumec.challenge.mercadolibre.ui.theme.ProductName
 
 @Composable
 fun ProductCard(
@@ -68,47 +68,32 @@ fun ProductContent(product: ProductPreview) {
         verticalArrangement = Arrangement.SpaceAround
     ) {
         if (product.acceptsMercadopago) {
-            Text(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(Blue)
-                    .padding(4.dp),
-                text = "Mercado Pago",
-                style = TextStyle(
-                    color = Color.White,
-                    fontSize = 10.sp,
-                    fontWeight = FontWeight.SemiBold
-                ),
-            )
+            MercadoPagoLabel()
         }
         Text(
             text = product.title,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
-            style = TextStyle(
-                color = ProductName,
-                fontSize = 14.sp,
-            ),
+            style = MaterialTheme.typography.h2
         )
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ) {
             Text(
                 text = product.price.formatPrice(),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 style = TextStyle(
-                    color = Color.Black,
                     fontSize = 20.sp,
                 ),
             )
             Text(
-                text = "Cali, Valle",
+                text = product.location,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 style = TextStyle(
-                    color = Color.Black,
+                    color = Blue,
+                    fontWeight = FontWeight.Light,
                     fontSize = 12.sp,
                 ),
             )

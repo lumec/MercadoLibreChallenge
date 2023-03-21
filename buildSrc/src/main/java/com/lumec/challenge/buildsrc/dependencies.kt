@@ -25,6 +25,7 @@ object Libs {
         object Navigation {
             private const val version = "2.5.3"
             const val compose = "androidx.navigation:navigation-compose:$version"
+            const val testing = "androidx.navigation:navigation-testing:$version"
         }
 
         object Test {
@@ -37,9 +38,12 @@ object Libs {
                 private const val version = "1.1.4"
                 const val junit = "androidx.test.ext:junit-ktx:$version"
             }
-            object Espresso{
-                private const val version="3.5.0"
+            object Espresso {
+                private const val version = "3.5.1"
                 const val contrib = "androidx.test.espresso:espresso-contrib:$version"
+                const val core = "androidx.test.espresso:espresso-core:$version"
+                const val idlingResource = "androidx.test.espresso:espresso-idling-resource:$version"
+
             }
         }
     }
@@ -60,7 +64,7 @@ object Libs {
         const val core = "io.arrow-kt:arrow-core:$version"
     }
 
-    object Coil{
+    object Coil {
         private const val version = "2.2.2"
         const val compose = "io.coil-kt:coil-compose:$version"
     }
@@ -72,10 +76,12 @@ object Libs {
             const val ui = "androidx.compose.ui:ui:$version"
             const val tooling =  "androidx.compose.ui:ui-tooling:$version"
             const val toolingPreview = "androidx.compose.ui:ui-tooling-preview:$version"
-            const val testJunit4 = "androidx.compose.ui:ui-test-junit4:$version"
+            const val testJunit4 = "androidx.compose.ui:ui-test-junit4:1.3.3"
+            const val testManifest = "androidx.compose.ui:ui-test-manifest:$version"
         }
 
         object Material {
+            const val version = "1.3.1"
             const val material = "androidx.compose.material:material:$version"
         }
 

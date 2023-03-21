@@ -55,6 +55,7 @@ private fun List<ProductPreviewResponse>.toDomainModel(): List<ProductPreview> =
 private fun ProductPreviewResponse.toDomainModel(): ProductPreview = ProductPreview(
     acceptsMercadopago = acceptsMercadopago ?: false,
     id = id ?: "",
+    location = (sellerAddress?.city?.name + ", " + sellerAddress?.state?.name),
     pictureUrl = thumbnail ?: "",
     price = price ?: 0,
     title = title ?: "",
@@ -69,6 +70,7 @@ private fun ProductDetailsResponse.toDomainModel(
     description = description.text ?: "",
     freeShipping = shipping?.freeShipping ?: false,
     id = id ?: "",
+    location = (sellerAddress?.city?.name + ", " + sellerAddress?.state?.name),
     pictureUrl = secureThumbnail ?: "",
     picturesUrl = pictures?.mapNotNull { it?.secureUrl } ?: emptyList(),
     price = price ?: 0,

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -13,10 +14,11 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.lumec.challenge.mercadolibre.ui.Destinations
-import com.lumec.challenge.mercadolibre.ui.common.*
+import com.lumec.challenge.mercadolibre.ui.common.components.ErrorScreen
 import com.lumec.challenge.mercadolibre.ui.product_list.components.ProductCard
 import com.lumec.challenge.mercadolibre.ui.product_list.components.SearchBar
 import com.lumec.challenge.mercadolibre.ui.theme.BackgroundListColor
@@ -55,13 +57,18 @@ fun ProductListScreen(
             contentAlignment = Alignment.Center
         ) {
             if (state.products.isEmpty() && !state.resetSearch &&
-                !state.isLoading && state.error == null) {
+                !state.isLoading && state.error == null
+            ) {
                 Column(
                     modifier = Modifier.fillMaxSize(),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    Text("No encontramos publicaciones")
+                    Text(
+                        textAlign = TextAlign.Center,
+                        text = "No encontramos publicaciones.\nTrata de usar palabras claves en tu nueva búsqueda.",
+                        style = MaterialTheme.typography.subtitle1
+                    )
                 }
             } else {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
@@ -83,7 +90,10 @@ fun ProductListScreen(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    Text("Por favor inicia tu búsqueda")
+                    Text(
+                        text = "Por favor inicia tu búsqueda",
+                        style = MaterialTheme.typography.subtitle1
+                    )
                 }
             }
             if (state.isLoading) {

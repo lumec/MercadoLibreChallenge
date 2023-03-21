@@ -12,3 +12,8 @@ fun mapCondition(condition: String) =
         "used" -> "Usado"
         else -> {}
     }
+
+fun validateAvailableProducts(quantity: Int): String {
+    return if (quantity == 1) "$quantity unidad disponible"
+    else "$quantity unidades disponibles"
+}

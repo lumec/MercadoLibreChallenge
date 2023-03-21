@@ -50,7 +50,10 @@ fun SearchBar(
             value = text,
             onValueChange = { text = it },
             placeholder = {
-                Text(text = "Buscar en Mercado Libre")
+                Text(
+                    text = "Buscar en Mercado Libre",
+                    style = MaterialTheme.typography.h4
+                )
             },
             leadingIcon = {
                 Icon(
