@@ -14,5 +14,7 @@ data class ProductDetailsResponse(
     val price: Int?,
     @SerializedName("secure_thumbnail")
     val secureThumbnail: String?,
+    @SerializedName("seller_address")
+    val sellerAddress: SellerAddress?,
     val title: String?
 )

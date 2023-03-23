@@ -3,6 +3,6 @@
     <string name="connectivity_error">¡Por favor revisa tu conexión a internet
         e intenta nuevamente!</string>
     <string name="server_error">Tenemos problemas de conexión con el servidor.
-        Por favor intenta nuevamente</string>
-    <string name="unknown_error">Ha ocurrido un error. Por favor intenta nuevamente</string>
+        \nPor favor intenta nuevamente.</string>
+    <string name="unknown_error">Ha ocurrido un error.\nPor favor intenta nuevamente.</string>
 </resources>

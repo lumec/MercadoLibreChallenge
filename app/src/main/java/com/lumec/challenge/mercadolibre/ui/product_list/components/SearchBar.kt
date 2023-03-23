@@ -1,19 +1,29 @@
 package com.lumec.challenge.mercadolibre.ui.product_list.components
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
+import com.lumec.challenge.mercadolibre.ui.theme.SearchBarColor
 
 @Composable
 fun SearchBar(
@@ -21,21 +31,29 @@ fun SearchBar(
     onSearch: (String) -> Unit,
     onKeyboardSearchClicked: () -> Unit,
     onDelete: () -> Unit,
-    ) {
+) {
     Row(
         modifier = Modifier
-                .fillMaxWidth(),
+            .fillMaxWidth()
+            .background(SearchBarColor)
+            .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        var text by remember { mutableStateOf(query)}
+        var text by rememberSaveable { mutableStateOf(query) }
 
-        Spacer(modifier = Modifier.width(8.dp))
         OutlinedTextField(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .semantics {
+                    this.contentDescription = "search bar"
+                },
             value = text,
             onValueChange = { text = it },
             placeholder = {
-                Text(text = "Estoy buscando...")
+                Text(
+                    text = "Buscar en Mercado Libre",
+                    style = MaterialTheme.typography.h4
+                )
             },
             leadingIcon = {
                 Icon(
@@ -59,6 +77,7 @@ fun SearchBar(
                     }
                 }
             },
+            shape = CircleShape,
             maxLines = 1,
             singleLine = true,
             keyboardOptions = KeyboardOptions(
@@ -66,12 +85,17 @@ fun SearchBar(
             ),
             keyboardActions = KeyboardActions(
                 onSearch = {
-                    if(text.isNotEmpty()) {
+                    if (text.isNotEmpty()) {
                         onKeyboardSearchClicked()
                         onSearch(text)
                     }
                 }
-            )
+            ),
+            colors = TextFieldDefaults.textFieldColors(
+                backgroundColor = Color.White,
+                focusedIndicatorColor = SearchBarColor,
+                unfocusedIndicatorColor = SearchBarColor
+            ),
         )
     }
 }
