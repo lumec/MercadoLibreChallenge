@@ -5,12 +5,11 @@ fun Int.formatPrice() : String  {
     return "$ $format"
 }
 
-fun mapCondition(condition: String) =
+fun mapCondition(condition: String): String =
     when(condition) {
         "new" -> "Nuevo"
-        "not_specified" -> "No especificado"
         "used" -> "Usado"
-        else -> {}
+        else -> "No especificado"
     }
 
 fun validateAvailableProducts(quantity: Int): String {

@@ -42,7 +42,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion Libs.Compose.version
+        kotlinCompilerExtensionVersion Libs.Compose.extVersion
     }
     packagingOptions {
         resources {
@@ -81,6 +81,7 @@ dependencies {
     implementation Libs.Compose.UI.ui
     implementation Libs.Compose.UI.toolingPreview
     debugImplementation Libs.Compose.UI.tooling
+    implementation Libs.Compose.Foundation.foundation
 
     implementation Libs.Arrow.core
 

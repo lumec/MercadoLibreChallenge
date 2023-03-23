@@ -49,7 +49,7 @@ object Libs {
     }
 
     object Kotlin {
-        private const val version = "1.7.10"
+        private const val version = "1.8.10"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
 
         object Coroutines {
@@ -71,7 +71,7 @@ object Libs {
 
     object Compose {
         const val version = "1.3.1"
-
+        const val extVersion = "1.4.3"
         object UI {
             const val ui = "androidx.compose.ui:ui:$version"
             const val tooling =  "androidx.compose.ui:ui-tooling:$version"
@@ -83,6 +83,11 @@ object Libs {
         object Material {
             const val version = "1.3.1"
             const val material = "androidx.compose.material:material:$version"
+        }
+
+        object Foundation {
+            const val version = "1.4.0-rc01"
+            const val foundation = "androidx.compose.foundation:foundation:$version"
         }
 
     }

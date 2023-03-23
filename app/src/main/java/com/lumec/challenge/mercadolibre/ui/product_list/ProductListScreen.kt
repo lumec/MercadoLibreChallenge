@@ -1,6 +1,5 @@
 package com.lumec.challenge.mercadolibre.ui.product_list
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -102,9 +101,6 @@ fun ProductListScreen(
             if (state.error != null) {
                 ErrorScreen(state.error)
             }
-            //Log.e("TAG","search: ${state.products}")
-            //Log.e("TAG","error: ${state.error}")
-            Log.e("TAG", "resetSearch: ${state.resetSearch}")
         }
     }
 }

@@ -16,12 +16,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
 import com.lumec.challenge.domain.ProductDetails
 import com.lumec.challenge.mercadolibre.ui.common.components.MercadoPagoLabel
 import com.lumec.challenge.mercadolibre.ui.common.formatPrice
@@ -85,14 +83,7 @@ fun Details(
                     MercadoPagoLabel()
                 }
             }
-            AsyncImage(
-                model = product.pictureUrl,
-                contentDescription = "Product Image",
-                modifier = Modifier
-                    .background(Color.White)
-                    .fillMaxWidth()
-                    .height(250.dp)
-            )
+            HorizontalCarousel(product.picturesUrl)
             Text(
                 modifier = Modifier.padding(top = 8.dp),
                 text = product.price.formatPrice(),
