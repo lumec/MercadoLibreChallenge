@@ -6,7 +6,14 @@ Es válido mencionar que este proyecto implementa los principios de **Clean Arch
 
 Lo anterior se logró gracias a los conocimientos adquiridos en el curso de **ArchitectCoders** de **Antonio Leiva,** del cual hice parte y a otros recursos disponibles en la internet.
 
-[Vídeo demo](https://www.youtube.com/watch?v=2bxu2ykusxQ "Vídeo demo")
+## Demo
+
+| Funcional | Cambios de orientación | Manejo de errores
+|--|--|--|
+| <img src="images/part1.gif" width="200px"> | <img src="images/part2.gif" width="200px"> | <img src="images/part3.gif" width="200px"> | 
+
+
+:arrow_forward: [Vídeo demo](https://youtu.be/MIb5NvRfV8k "Vídeo demo") :arrow_forward:
 
 ------------
 
@@ -28,12 +35,12 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posible 
 - [android ktx](https://developer.android.com/kotlin/ktx "android ktx"): Es un conjunto de extensiones de Kotlin que se incluyen con Android Jetpack y otras bibliotecas de Android.
 - activity: Acceso a Compose sobre la clase Activity.
 - [compose](https://developer.android.com/jetpack/androidx/releases/compose?hl=en "compose"): Es un moderno kit de herramientas declarativas de IU para Android.
-- [lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "lifecycle"): realiza  acciones en respuesta a un cambio en el estado del ciclo de vida de otro componente, como actividades y fragmentos.
-- [navigation-compose](https://developer.android.com/jetpack/compose/navigation " navigation-compose"): ayuda a navegar entre destinos composables. 
-
+- [lifecycle](https://developer.android.com/jetpack/androidx/releases/lifecycle "lifecycle"): Realiza  acciones en respuesta a un cambio en el estado del ciclo de vida de otro componente, como actividades y fragmentos.
+- [navigation-compose](https://developer.android.com/jetpack/compose/navigation "navigation-compose"): Ayuda a navegar entre destinos composables. 
+- [compose-foundation](https://developer.android.com/jetpack/androidx/releases/compose-foundation "compose-foundation"):  Útil para la creación de carusel horizontal en la vista de detalle.
 
 #### Procesos asíncronos
-- [coroutines](https://kotlinlang.org/docs/coroutines-overview.html "coroutines"): perfectas para ejecución de tareas asíncronas o no bloqueantes
+- [coroutines](https://kotlinlang.org/docs/coroutines-overview.html "coroutines"): Perfectas para ejecución de tareas asíncronas o no bloqueantes
 
 
 #### Imágenes
@@ -88,7 +95,7 @@ Por cuestiones de seguridad, el archivo `google-services.json` que hace posible 
 La arquitectura limpia en Android se refiere a un enfoque para diseñar aplicaciones de manera modular y mantenible, utilizando patrones de diseño específicos para asegurar la separación de responsabilidades, facilitar el mantenimiento y actualización. La arquitectura limpia mejora la calidad del código, la facilidad de prueba y la escalabilidad de la aplicación.
 
 <p align="center">
-  <img src="https://github.com/lumec/MercadoLibreChallenge/blob/compose_testing/images/clean_architecture_es.png" height="300" width="300"/>
+  <img src="/images/clean_architecture_es.png" height="300" width="300"/>
 </p>
 
 Este proyecto está modularizado de la siguiente manera:
@@ -124,7 +131,7 @@ En el buildSrc se gestionan las dependencias usadas en el proyecto.
 
 ## CI/CD
 
-Falta implementar
+:construction: Falta implementar :construction:
 
 -------
 
